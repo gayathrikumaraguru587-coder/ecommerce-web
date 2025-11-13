@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "Abstract waves pattern",
+      "imageUrl": "https://images.unsplash.com/photo-1635614017406-7c192d832072?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhYnN0cmFjdCUyMHdhdmVzfGVufDB8fHx8MTc2MzAwNTg5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract waves"
+    },
+    {
+      "id": "product-headphones",
+      "description": "Modern wireless headphones",
+      "imageUrl": "https://images.unsplash.com/photo-1612858249937-1cc0852093dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3aXJlbGVzcyUyMGhlYWRwaG9uZXN8ZW58MHx8fHwxNzYyOTQ0MTAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wireless headphones"
+    },
+    {
+      "id": "product-smartwatch",
+      "description": "Sleek and modern smartwatch",
+      "imageUrl": "https://images.unsplash.com/photo-1660844817855-3ecc7ef21f12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzbWFydHdhdGNofGVufDB8fHx8MTc2Mjk5NjgyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smartwatch"
+    },
+    {
+      "id": "product-camera",
+      "description": "Professional digital camera",
+      "imageUrl": "https://images.unsplash.com/photo-1541766066774-c86dcf76dff2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaWdpdGFsJTIwY2FtZXJhfGVufDB8fHx8MTc2MzAxMjQyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital camera"
+    },
+    {
+      "id": "product-laptop",
+      "description": "Ultra-thin and powerful laptop",
+      "imageUrl": "https://images.unsplash.com/photo-1759668358492-927c1a1062b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb2Rlcm4lMjBsYXB0b3B8ZW58MHx8fHwxNzYyOTM2OTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern laptop"
+    },
+    {
+      "id": "product-drone",
+      "description": "High-tech camera drone",
+      "imageUrl": "https://images.unsplash.com/photo-1743357017924-071a88eea40e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjYW1lcmElMjBkcm9uZXxlbnwwfHx8fDE3NjI5ODM2Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "camera drone"
+    },
+    {
+      "id": "product-keyboard",
+      "description": "Ergonomic mechanical keyboard",
+      "imageUrl": "https://images.unsplash.com/photo-1625130694338-4110ba634e59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZWNoYW5pY2FsJTIwa2V5Ym9hcmR8ZW58MHx8fHwxNzYyODk4MTQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mechanical keyboard"
+    },
+    {
+      "id": "user-avatar",
+      "description": "User avatar placeholder",
+      "imageUrl": "https://images.unsplash.com/photo-1521566652839-697aa473761a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29ufGVufDB8fHx8MTc2Mjk2MzcwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person"
+    }
+  ]
 }
