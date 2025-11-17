@@ -3,12 +3,13 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || 'AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || 'your-project-id.firebaseapp.com',
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'your-project-id',
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || 'your-project-id.appspot.com',
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || 'your-sender-id',
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || 'your-app-id',
+  apiKey: "AIzaSyAl1H-J2MiD3YiYDCJyITHBKvyaaarFKuE",
+  authDomain: "commerce-wave-621e9.firebaseapp.com",
+  projectId: "commerce-wave-621e9",
+  storageBucket: "commerce-wave-621e9.appspot.com",
+  messagingSenderId: "370568500266",
+  appId: "1:370568500266:web:5419eb58a11c342a305f53",
+  measurementId: "G-180ESR9D2K"
 };
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
