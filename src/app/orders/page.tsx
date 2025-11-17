@@ -128,7 +128,7 @@ export default function OrdersPage() {
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="font-semibold">${order.total.toFixed(2)}</p>
+                    <p className="font-semibold">₹{order.total}</p>
                     <Badge variant={order.status === 'Processing' ? 'secondary' : 'default'}>{order.status}</Badge>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ export default function OrdersPage() {
                       <span>
                         {item.name} <span className="text-muted-foreground">x{item.quantity}</span>
                       </span>
-                      <span>${(item.price * item.quantity).toFixed(2)}</span>
+                      <span>₹{item.price * item.quantity}</span>
                     </li>
                   ))}
                 </ul>

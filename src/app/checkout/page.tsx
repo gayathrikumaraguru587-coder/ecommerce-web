@@ -222,7 +222,7 @@ export default function CheckoutPage() {
                 </div>
 
                 <Button type="submit" size="lg" className="w-full" disabled={form.formState.isSubmitting}>
-                  {form.formState.isSubmitting ? 'Placing Order...' : `Pay $${totalPrice.toFixed(2)}`}
+                  {form.formState.isSubmitting ? 'Placing Order...' : `Pay ₹${totalPrice}`}
                 </Button>
               </form>
             </Form>
@@ -238,12 +238,12 @@ export default function CheckoutPage() {
                 {cartItems.map((item) => (
                   <div key={item.id} className="flex justify-between items-center">
                     <p>{item.name} <span className="text-muted-foreground">x{item.quantity}</span></p>
-                    <p>${(item.price * item.quantity).toFixed(2)}</p>
+                    <p>₹{item.price * item.quantity}</p>
                   </div>
                 ))}
                 <div className="border-t pt-4 mt-4 flex justify-between font-bold text-lg">
                   <p>Total</p>
-                  <p>${totalPrice.toFixed(2)}</p>
+                  <p>₹{totalPrice}</p>
                 </div>
               </div>
             </CardContent>

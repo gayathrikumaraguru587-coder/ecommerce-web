@@ -15,7 +15,7 @@ export const products: Product[] = [
     slug: 'wireless-headphones',
     description:
       'Immerse yourself in high-fidelity sound with these noise-cancelling wireless headphones. Long-lasting battery and comfortable design for all-day listening.',
-    price: 199.99,
+    price: 14999,
     category: 'Electronics',
     imageId: 'product-headphones',
   },
@@ -25,7 +25,7 @@ export const products: Product[] = [
     slug: 'smartwatch-pro',
     description:
       'Stay connected and track your fitness goals with the Smartwatch Pro. Features a vibrant AMOLED display, heart rate monitor, and GPS.',
-    price: 249.99,
+    price: 19999,
     category: 'Electronics',
     imageId: 'product-smartwatch',
   },
@@ -35,7 +35,7 @@ export const products: Product[] = [
     slug: 'digital-camera-x1',
     description:
       'Capture stunning photos and 4K videos with this professional-grade digital camera. Comes with a versatile 18-55mm lens.',
-    price: 799.99,
+    price: 59999,
     category: 'Cameras',
     imageId: 'product-camera',
   },
@@ -45,7 +45,7 @@ export const products: Product[] = [
     slug: 'ultra-slim-laptop',
     description:
       'A powerful yet lightweight laptop designed for productivity on the go. Features a 14-inch display and the latest generation processor.',
-    price: 1299.99,
+    price: 99999,
     category: 'Computers',
     imageId: 'product-laptop',
   },
@@ -55,7 +55,7 @@ export const products: Product[] = [
     slug: 'quadcopter-drone',
     description:
       'Explore the world from a new perspective. This drone offers a 4K camera, 30 minutes of flight time, and intelligent flight modes.',
-    price: 499.99,
+    price: 39999,
     category: 'Cameras',
     imageId: 'product-drone',
   },
@@ -65,7 +65,7 @@ export const products: Product[] = [
     slug: 'mechanical-keyboard',
     description:
       'Experience a superior typing feel with this backlit mechanical keyboard. Customizable RGB lighting and durable switches.',
-    price: 149.99,
+    price: 9999,
     category: 'Computers',
     imageId: 'product-keyboard',
   },
