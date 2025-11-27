@@ -41,8 +41,8 @@ export default function CartPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+      <div className="text-center mb-8 md:mb-12">
+        <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
           Your Shopping Cart
         </h1>
         <p className="text-muted-foreground mt-2">
@@ -74,9 +74,9 @@ export default function CartPage() {
                     return (
                       <div
                         key={item.id}
-                        className="flex items-center p-4 gap-4"
+                        className="flex flex-col sm:flex-row items-start sm:items-center p-4 gap-4"
                       >
-                        <div className="relative h-24 w-24 rounded-md overflow-hidden flex-shrink-0">
+                        <div className="relative h-24 w-24 rounded-md overflow-hidden flex-shrink-0 self-center">
                           {productImage && (
                             <Image
                               src={productImage.imageUrl}
@@ -94,7 +94,7 @@ export default function CartPage() {
                             ₹{item.price}
                           </p>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 self-end sm:self-center">
                           <Input
                             type="number"
                             min="1"
@@ -104,14 +104,25 @@ export default function CartPage() {
                             }
                             className="w-16 h-9 text-center"
                           />
+                           <p className="font-semibold w-20 text-right md:hidden">
+                            ₹{item.price * item.quantity}
+                          </p>
+                           <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => removeFromCart(item.id)}
+                          >
+                            <Trash2 className="h-5 w-5 text-muted-foreground hover:text-destructive" />
+                          </Button>
                         </div>
-                        <p className="font-semibold w-20 text-right">
+                        <p className="font-semibold w-20 text-right hidden md:block">
                           ₹{item.price * item.quantity}
                         </p>
                         <Button
                           variant="ghost"
                           size="icon"
                           onClick={() => removeFromCart(item.id)}
+                          className='hidden'
                         >
                           <Trash2 className="h-5 w-5 text-muted-foreground hover:text-destructive" />
                         </Button>

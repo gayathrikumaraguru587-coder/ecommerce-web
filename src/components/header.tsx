@@ -11,6 +11,7 @@ import {
 import { UserNav } from '@/components/user-nav';
 import { useCart } from '@/context/CartContext';
 import { useAuth } from '@/context/AuthContext';
+import React from 'react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -20,6 +21,7 @@ const navLinks = [
 export function Header() {
   const { cartCount } = useCart();
   const { loading } = useAuth();
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background/80 backdrop-blur-sm z-40">
@@ -42,7 +44,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Sheet>
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Button
               variant="outline"
@@ -57,6 +59,7 @@ export function Header() {
             <nav className="grid gap-6 text-lg font-medium">
               <Link
                 href="/"
+                 onClick={() => setIsOpen(false)}
                 className="flex items-center gap-2 text-lg font-semibold"
               >
                 <Package2 className="h-6 w-6 text-primary" />
@@ -66,6 +69,7 @@ export function Header() {
                 <Link
                   key={href}
                   href={href}
+                  onClick={() => setIsOpen(false)}
                   className="text-muted-foreground hover:text-foreground"
                 >
                   {label}
@@ -79,7 +83,7 @@ export function Header() {
             <Link href="/cart">
               <ShoppingCart className="h-5 w-5" />
               {cartCount > 0 && (
-                <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+                <span className="absolute -top-1 -right-1 inline-flex items-center justify-center p-1 h-5 w-5 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
                   {cartCount}
                 </span>
               )}
