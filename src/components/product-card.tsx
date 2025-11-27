@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -14,7 +15,7 @@ import {
 import type { Product } from '@/lib/products';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useCart } from '@/context/CartContext';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, Zap } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -22,9 +23,23 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const { addToCart } = useCart();
+  const router = useRouter();
   const productImage = PlaceHolderImages.find(
     (img) => img.id === product.imageId
   );
+
+  const handleBuyNow = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    addToCart(product);
+    router.push('/cart');
+  };
+
+  const handleAddToCart = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    addToCart(product);
+  }
 
   return (
     <Card className="w-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -52,13 +67,19 @@ export function ProductCard({ product }: ProductCardProps) {
           ₹{product.price}
         </CardDescription>
       </CardContent>
-      <CardFooter className="p-4 pt-0">
+      <CardFooter className="p-4 pt-0 grid grid-cols-2 gap-2">
         <Button
-          onClick={() => addToCart(product)}
+          onClick={handleAddToCart}
           className="w-full"
           variant="outline"
         >
           <ShoppingCart className="mr-2 h-4 w-4" /> Add to Cart
+        </Button>
+        <Button
+          onClick={handleBuyNow}
+          className="w-full"
+        >
+          <Zap className="mr-2 h-4 w-4" /> Buy Now
         </Button>
       </CardFooter>
     </Card>
