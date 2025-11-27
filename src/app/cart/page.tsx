@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -15,6 +14,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import Link from 'next/link';
 
 export default function CartPage() {
   const {
@@ -24,6 +24,20 @@ export default function CartPage() {
     totalPrice,
     cartCount,
   } = useCart();
+
+  const handleCheckout = () => {
+    const whatsAppNumber = '9159345097';
+    let message = "I'd like to place an order for the following items:\n\n";
+
+    cartItems.forEach(item => {
+      message += `- ${item.name} (x${item.quantity}) - ₹${item.price * item.quantity}\n`;
+    });
+
+    message += `\n*Total: ₹${totalPrice}*`;
+
+    const whatsappUrl = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -130,8 +144,8 @@ export default function CartPage() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button asChild className="w-full" size="lg">
-                  <Link href="/checkout">Proceed to Checkout</Link>
+                <Button onClick={handleCheckout} className="w-full" size="lg">
+                  Proceed to Checkout
                 </Button>
               </CardFooter>
             </Card>
